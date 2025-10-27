@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Crestline General Contracting" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <title>Contact | Crestline General Contracting</title>
+  <meta name="description" content="Contact Crestline General Contracting for your next renovation or build in Edmonton and area." />
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Crestline<span>GC</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="btn btn-primary" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" style="background-image:url('assets/images/hero-contact.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Contact Us</h1>
+      <p>We’ll reply within one business day.</p>
+    </div>
+  </header>
+
+  <main class="container contact">
+    <section class="contact-details">
+      <h2>Email</h2>
+      <p><a href="mailto:crestlinegc@gmail.com">crestlinegc@gmail.com</a></p>
+      <h2>Service Area</h2>
+      <p>Edmonton, Sherwood Park, St. Albert, Fort Saskatchewan, Leduc, Spruce Grove, Stony Plain, Beaumont, Devon, Nisku.</p>
+    </section>
+
+    <section class="contact-form">
+      <h2>Send a Message</h2>
+      <form name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thank-you.html">
+        <input type="hidden" name="form-name" value="contact-form">
+        <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+        <div class="grid two">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <textarea name="message" rows="6" placeholder="Tell us about your project…" required></textarea>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <!-- Hidden duplicate for Netlify build bots -->
+      <form name="contact-form" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <textarea name="message"></textarea>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Crestline General Contracting — Edmonton & Area</p>
+      <p><a href="mailto:crestlinegc@gmail.com">crestlinegc@gmail.com</a></p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

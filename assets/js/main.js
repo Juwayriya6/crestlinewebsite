@@ -1,8 +1,2 @@
-
-document.addEventListener('DOMContentLoaded', () => {
-  const toggle = document.querySelector('.nav-toggle');
-  const links = document.querySelector('.nav-links');
-  if (toggle && links) {
-    toggle.addEventListener('click', () => links.classList.toggle('show'));
-  }
-});
+document.querySelectorAll('[data-open]').forEach(b=>b.onclick=()=>document.querySelector(b.dataset.open).setAttribute('aria-hidden','false'));
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('.modal').setAttribute('aria-hidden','true'));

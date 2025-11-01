@@ -3,67 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Projects | Crestline General Contracting</title>
+  <meta name="author" content="Crestline General Contracting" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css" />
+
+  <title>Projects | Crestline General Contracting</title>
+  <meta name="description" content="A selection of residential and commercial projects completed by Crestline across the Edmonton region." />
 </head>
 <body>
-  <nav class="nav">
-    <a class="brand" href="index.html">Crestline<span> GC</span></a>
-    <button class="nav-toggle" aria-label="toggle menu">☰</button>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a class="active" href="projects.html">Projects</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="#" class="btn primary open-quote">Request Quote</a></li>
-    </ul>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Crestline<span>GC</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="btn btn-primary" href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
   </nav>
 
-  <header class="sub-hero">
-    <img src="assets/images/hero-projects.jpg" alt="Project banner">
-    <div class="sub-hero-text"><h1>Projects</h1></div>
+  <header class="hero" style="background-image:url('assets/images/hero-projects.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Projects</h1>
+      <p>Craftsmanship, delivered.</p>
+    </div>
   </header>
 
   <main class="container">
-    <section class="grid-3">
-      <img src="assets/images/project1.jpg" alt="Kitchen/basement renovation">
-      <img src="assets/images/project2.jpg" alt="Exterior repair project">
-      <img src="assets/images/project3.jpg" alt="Fence & deck improvement">
+    <section class="gallery">
+      <img src="assets/images/project1.jpg" alt="Renovation project" loading="lazy">
+      <img src="assets/images/project2.jpg" alt="Commercial build" loading="lazy">
+      <img src="assets/images/project3.jpg" alt="Exterior upgrade" loading="lazy">
     </section>
-    <div class="center mt">
-      <a class="btn outline" href="contact.html">Start Your Project</a>
-    </div>
   </main>
-
-  <footer class="footer">
-    <div class="container foot-flex">
-      <p>&copy; <span id="year"></span> Crestline General Contracting</p>
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Crestline General Contracting — Edmonton & Area</p>
       <p><a href="mailto:crestlinegc@gmail.com">crestlinegc@gmail.com</a></p>
     </div>
   </footer>
-
-  <div id="quote-popup" class="popup" aria-hidden="true">
-    <div class="popup-content" role="dialog" aria-labelledby="quoteTitle">
-      <button class="close">&times;</button>
-      <h2 id="quoteTitle">Request a Quote</h2>
-      <form name="crestline-quote" method="POST" data-netlify="true" action="/thank-you.html">
-        <input type="hidden" name="form-name" value="crestline-quote" />
-        <label>Full Name<input type="text" name="name" required></label>
-        <label>Email<input type="email" name="email" required></label>
-        <label>City/Town<input type="text" name="city" placeholder="e.g., Edmonton, St. Albert"></label>
-        <label>Details<textarea name="message" rows="4" placeholder="Tell us about your project" required></textarea></label>
-        <button type="submit" class="btn primary">Send</button>
-      </form>
-    </div>
-  </div>
-  <form name="crestline-quote" netlify netlify-honeypot="bot-field" hidden>
-    <input type="text" name="name">
-    <input type="email" name="email">
-    <textarea name="message"></textarea>
-  </form>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

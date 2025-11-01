@@ -1,37 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Crestline General Contracting</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/main.css" />
 </head>
 <body>
-  <nav class="topnav">
-    <a class="brand" href="index.html">Crestline</a>
-    <a class="link" href="index.html">Home</a>
+  <nav class="nav">
+    <a class="brand" href="index.html">Crestline<span> GC</span></a>
+    <button class="nav-toggle" aria-label="toggle menu">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+      <li><a href="#" class="btn primary open-quote">Request Quote</a></li>
+    </ul>
   </nav>
 
-  <header class="hero small">
-    <img src="assets/images/hero-contact.jpg" alt="Contact Crestline in Edmonton" />
-    <div class="hero-text">
-      <h1>Let’s Build Something</h1>
-      <p>Send your project details—we’ll reply quickly.</p>
-    </div>
+  <header class="sub-hero">
+    <img src="assets/images/hero-contact.jpg" alt="Contact banner">
+    <div class="sub-hero-text"><h1>Contact</h1></div>
   </header>
 
-  <main class="container form-wrap">
-    <form name="crestline-contact" method="POST" data-netlify="true" action="/thank-you.html">
-      <input type="hidden" name="form-name" value="crestline-contact" />
-      <label>Name<input type="text" name="name" required /></label>
-      <label>Email<input type="email" name="email" required /></label>
-      <label>Message<textarea name="message" rows="6" required></textarea></label>
-      <button class="btn" type="submit">Send Message</button>
-    </form>
+  <main class="container">
+    <section class="contact-grid">
+      <div>
+        <h2>Get in touch</h2>
+        <p>Email: <a href="mailto:crestlinegc@gmail.com">crestlinegc@gmail.com</a></p>
+        <p>Based in Edmonton, serving surrounding cities within ~50 km.</p>
+        <ul class="areas-list">
+          <li>St. Albert</li><li>Sherwood Park</li><li>Spruce Grove</li><li>Stony Plain</li><li>Fort Saskatchewan</li>
+          <li>Leduc</li><li>Beaumont</li><li>Devon</li><li>Nisku</li>
+        </ul>
+      </div>
+      <form name="crestline-contact" method="POST" data-netlify="true" action="/thank-you.html" class="contact-form">
+        <input type="hidden" name="form-name" value="crestline-contact" />
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Subject<input type="text" name="subject" placeholder="Renovation / Repair / Painting / Junk Removal" /></label>
+        <label>Message<textarea name="message" rows="6" required></textarea></label>
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; Crestline General Contracting | <a href="mailto:crestlinegc@gmail.com">crestlinegc@gmail.com</a></p>
+  <footer class="footer">
+    <div class="container foot-flex">
+      <p>&copy; <span id="year"></span> Crestline General Contracting</p>
+      <p><a href="mailto:crestlinegc@gmail.com">crestlinegc@gmail.com</a></p>
+    </div>
   </footer>
+
+  <!-- Hidden forms to prime Netlify -->
+  <form name="crestline-contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <input type="text" name="subject">
+    <textarea name="message"></textarea>
+  </form>
+  <form name="crestline-quote" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name">
+    <input type="email" name="email">
+    <textarea name="message"></textarea>
+  </form>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

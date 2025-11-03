@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
 
-  <!-- Keep your original base CSS, then our skin -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,15 +28,33 @@
         <a href="locations.html">Locations</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="top-cta"><a href="tel:+15875999236">(587) 599‑9236</a></div>
+      <div class="top-cta"><a href="tel:+15879263231">(587) 926‑3231</a></div>
     </div>
   </div>
 
-  <main class="container" style="padding: 2.5rem 0 3rem;">
-    <h1>Contact Crestline</h1>
-    <p class="small">Renovations • Repairs • Painting • Junk Removal — Edmonton &amp; Area</p>
+  <section class="hero-block">
+    <div class="media">
+      <picture>
+        <source srcset="assets/images/sections/section-inspector-1600.webp" media="(min-width:1200px)" type="image/webp">
+        <source srcset="assets/images/sections/section-inspector-1600.webp" media="(min-width:768px)" type="image/webp">
+        <source srcset="assets/images/sections/section-inspector-1200.webp" media="(max-width:767px)" type="image/webp">
+        <img src="assets/images/sections/section-inspector-1200.jpg" alt="Crestline contact — inspector speaking with homeowner" loading="eager" fetchpriority="high">
+      </picture>
+    </div>
+    <div class="container stack-lg">
+      <p class="eyebrow">Get a Free Estimate</p>
+      <h1 class="title">Contact Crestline</h1>
+      <p class="sub">Tell us about your project — we’ll get back to you quickly.</p>
+      <div class="stack-md">
+        <a class="btn btn-primary" href="contact.html">Free Estimate</a>
+        <a class="btn btn-outline" href="services.html">See Services</a>
+      </div>
+    </div>
+  </section>
 
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" style="display:grid; gap:1rem; max-width:720px; margin-top:1rem;">
+  <main class="container" style="padding: 2.5rem 0 3rem;">
+    <p class="small">Prefer to call? <a href="tel:+15879263231">(587) 926‑3231</a></p>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" style="display:grid; gap:1rem; max-width:720px;">
       <input type="hidden" name="form-name" value="contact">
       <p class="small" hidden>
         <label>Don’t fill this out: <input name="bot-field"></label>

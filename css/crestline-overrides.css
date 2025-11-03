@@ -130,4 +130,40 @@ p, li{ font-size: var(--step-0); color: #111827; }
   border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.1rem;
   background: #fff;
 }
-.card h3{ margin: 0 0 .25rem; }
+.card h3{ margin: 0 0 .25rem; }/* === Improve hero contrast (force bright text + darker overlay) === */
+.hero-block h1,
+.hero-block h2,
+.hero-block h3,
+.hero-block .title,
+.hero-block .sub,
+.hero-block .eyebrow {
+  color: #ffffff !important;
+  text-shadow: 0 3px 18px rgba(0,0,0,.50), 0 1px 0 rgba(0,0,0,.35);
+}
+
+/* keep the gradient highlight on the word in <mark> */
+.hero-block .title mark {
+  background: linear-gradient(90deg, var(--accent), #FFB703);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* make the image overlay a touch darker for readability */
+.hero-block::after {
+  background: linear-gradient(
+    180deg,
+    rgba(10,22,38,.70) 0%,
+    rgba(10,22,38,.55) 35%,
+    rgba(10,22,38,.78) 100%
+  ) !important;
+}
+
+/* buttons that sit on the hero */
+.hero-block .btn-outline {
+  color: #ffffff;
+  border-color: rgba(255,255,255,.70);
+}
+.hero-block .btn-outline:hover {
+  border-color: #ffffff;
+}

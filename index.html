@@ -1,73 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="Crestline General Contracting" />
+  <title>Crestline — One Call. Every Project. Done Right.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/crestline-overrides.css">
 
-  <title>Crestline General Contracting | Building Alberta’s Future</title>
-  <meta name="description" content="Crestline General Contracting builds and renovates homes and businesses across Edmonton, Sherwood Park, St. Albert, Fort Saskatchewan, Leduc, Spruce Grove, Stony Plain, Beaumont, Devon, and Nisku." />
-  <meta name="keywords" content="Edmonton general contractor, renovations, construction, basement development, tenant improvements, decks, garages, framing, drywall" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Crestline General Contracting", "email": "crestlinegc@gmail.com", "image": "assets/images/hero-home.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA"}, "areaServed": ["Edmonton", "Sherwood Park", "St. Albert", "Fort Saskatchewan", "Leduc", "Spruce Grove", "Stony Plain", "Beaumont", "Devon", "Nisku"]}</script>
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <a class="logo" href="index.html">Crestline<span>GC</span></a>
-      <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a class="btn btn-primary" href="contact.html">Contact Us</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <header class="hero" style="background-image:url('assets/images/hero-home.jpg');">
-    <div class="hero-overlay"></div>
-    <div class="container hero-content">
-      <h1>Building Alberta’s Future</h1>
-      <p class="tagline">Reliable, detail-driven construction across Edmonton & surrounding communities.</p>
-      <a class="btn btn-primary" href="contact.html">Contact Us</a>
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline" style="height:36px;width:auto">
+        <span>Crestline</span>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="locations.html">Locations</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="intro container">
-      <h2>About Crestline</h2>
-      <p>Crestline General Contracting is a locally-owned builder focused on quality workmanship, clear communication, and on-time delivery. From residential renovations to light commercial build-outs, our team combines skilled trades with dedicated project management.</p>
-      <ul class="areas">
-        <li>Edmonton</li><li>Sherwood Park</li><li>St. Albert</li><li>Fort Saskatchewan</li>
-        <li>Leduc</li><li>Spruce Grove</li><li>Stony Plain</li><li>Beaumont</li><li>Devon</li><li>Nisku</li>
-      </ul>
+  <header class="hero hero--image">
+    <picture class="hero-media">
+      <source srcset="assets/images/hero/crestline-hero-2400.webp" media="(min-width: 1200px)" type="image/webp">
+      <source srcset="assets/images/hero/crestline-hero-1600.webp" media="(min-width: 768px)" type="image/webp">
+      <source srcset="assets/images/hero/crestline-hero-1200.webp" media="(max-width: 767px)" type="image/webp">
+      <img src="assets/images/hero/crestline-hero-1024.jpg" alt="Crestline crew at work on scaffolding during sunset" loading="eager" fetchpriority="high">
+    </picture>
+
+    <div class="container stack-lg">
+      <p class="eyebrow">Crestline Contracting</p>
+      <h1 class="hero-title"><span>One Call.</span> <span>Every Project.</span> <mark>Done Right.</mark></h1>
+      <p class="hero-sub">Renovations • Repairs • Painting • Junk Removal — Edmonton &amp; Area</p>
+
+      <div class="stack-md">
+        <a class="btn btn-primary" href="contact.html">Free Estimate</a>
+        <a class="btn btn-ghost" href="services.html">See Services</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 3rem 0;">
+    <section class="stack-lg" style="margin-bottom: 2.5rem;">
+      <h2>Why Crestline</h2>
+      <p>Edmonton’s one‑call contractors for renovations, repairs, painting, and junk removal. Licensed &amp; insured. Free estimates. From small fixes to full renovations, we show up, do it right, and clean up after.</p>
+      <p><a class="btn btn-primary" href="tel:+15875999236">Call (587) 599‑9236</a></p>
     </section>
 
-    <section class="features container">
-      <article>
-        <h3>Residential</h3>
-        <p>Basements, kitchens, bathrooms, additions, framing, drywall, and finishing.</p>
-      </article>
-      <article>
-        <h3>Commercial</h3>
-        <p>Retail & office build-outs, tenant improvements, and project coordination.</p>
-      </article>
-      <article>
-        <h3>Exterior</h3>
-        <p>Decks, garages, siding, roofing, windows, doors, and concrete flatwork.</p>
-      </article>
+    <section class="stack-lg">
+      <h2>Popular Services</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Renovations</h3>
+          <p>Kitchens, bathrooms, basements, drywall &amp; flooring. Professional finishes end‑to‑end.</p>
+        </div>
+        <div class="card">
+          <h3>Repairs &amp; Handyman</h3>
+          <p>Doors, hardware, faucets, drywall patches, TV mounting, caulking, weatherstripping.</p>
+        </div>
+        <div class="card">
+          <h3>Painting</h3>
+          <p>Walls, ceilings, trim, accent walls. Careful prep, crisp lines, durable topcoats.</p>
+        </div>
+        <div class="card">
+          <h3>Junk Removal</h3>
+          <p>Single items to small loads — garage, move‑out, reno debris. Clean, safe disposal.</p>
+        </div>
+      </div>
+      <div style="margin-top:1.25rem;">
+        <a class="btn btn-primary" href="services.html">All Services</a>
+      </div>
     </section>
   </main>
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Crestline General Contracting — Edmonton & Area</p>
-      <p><a href="mailto:crestlinegc@gmail.com">crestlinegc@gmail.com</a></p>
+
+  <div class="callnow"><a href="tel:+15875999236">Call Now</a></div>
+
+  <footer style="border-top:1px solid #e5e7eb;margin-top:2rem;">
+    <div class="container" style="padding:1rem 0;">
+      <p class="small">© 2025 Crestline Contracting — Edmonton &amp; Area</p>
     </div>
   </footer>
-  <script src="assets/js/main.js"></script>
 </body>
 </html>

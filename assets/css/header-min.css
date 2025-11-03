@@ -1,34 +1,4 @@
-/* ===== Crestline Minimal Header (Desktop) =====
-   Load this AFTER your other CSS.
-   Goal: clean, quiet header like AutoLocks (desktop), while keeping mobile FAB.
-*/
 
-/* Base header shell */
-.site-topbar{ background:#fff; border-bottom:1px solid #eef2f7; box-shadow:none; }
-.site-topbar .bar{ display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.65rem 0; }
-
-/* Brand */
-.site-topbar .brand{ display:flex; align-items:center; gap:.6rem; text-decoration:none; color:var(--ink); }
-.site-topbar .brand img{ height:32px; width:auto; border-radius:6px; }
-.site-topbar .brand span{ font-weight:800; font-size:1.25rem; letter-spacing:-.01em; line-height:1.05; }
-.site-topbar .brand .tagline{ display:none !important; } /* hide extra tagline always on desktop */
-
-/* Nav */
-.site-topbar nav{ display:flex; align-items:center; gap:1.15rem; }
-.site-topbar nav a{ text-decoration:none; color:var(--ink); font-weight:700; }
-.site-topbar nav a:hover{ text-decoration:underline; text-underline-offset:2px; }
-
-/* Phone: change from big pill to quiet text link */
-.top-cta a{
-  background:transparent !important;
-  color:var(--ink) !important;
-  border:0 !important;
-  padding:0 !important;
-  box-shadow:none !important;
-  font-weight:800;
-}
-
-/* Keep mobile look as-is (FAB + two-row) */
-@media (max-width:640px){
-  /* No changes here; mobile css from previous pack still applies */
-}
+/* Minimal desktop header */
+.site-topbar .brand .tagline{display:none}
+.top-cta a{background:transparent!important;color:var(--ink)!important;border:0!important;padding:0!important}

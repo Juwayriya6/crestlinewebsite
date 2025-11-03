@@ -2,22 +2,25 @@
 <html lang="en">
 <head>
   <title>Contact — Crestline</title>
+
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
 
+  <!-- Keep your original base CSS, then our skin -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/crestline-overrides.css">
+  <link rel="stylesheet" href="assets/css/crestline-autolocks.css">
 
 </head>
 <body>
-  <header class="site-header">
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
+
+  <div class="site-topbar">
+    <div class="container bar">
       <a class="brand" href="index.html">
-        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline" style="height:36px;width:auto">
+        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline">
         <span>Crestline</span>
       </a>
       <nav>
@@ -26,73 +29,59 @@
         <a href="locations.html">Locations</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <div class="top-cta"><a href="tel:+15875999236">(587) 599‑9236</a></div>
     </div>
-  </header>
+  </div>
 
-  <header class="hero">
-    <div class="container stack-lg">
-      <p class="eyebrow">Get a Free Estimate</p>
-      <h1 class="hero-title">Contact Crestline</h1>
-      <p class="hero-sub">Renovations • Repairs • Painting • Junk Removal — Edmonton &amp; Area</p>
-    </div>
-  </header>
+  <main class="container" style="padding: 2.5rem 0 3rem;">
+    <h1>Contact Crestline</h1>
+    <p class="small">Renovations • Repairs • Painting • Junk Removal — Edmonton &amp; Area</p>
 
-  <main class="container" style="padding: 2rem 0 3rem;">
-    <section class="stack-lg">
-      <h2>Tell us about your project</h2>
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" style="display:grid; gap:1rem; max-width:720px;">
-        <input type="hidden" name="form-name" value="contact">
-        <p class="small" hidden>
-          <label>Don’t fill this out: <input name="bot-field"></label>
-        </p>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html" style="display:grid; gap:1rem; max-width:720px; margin-top:1rem;">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="small" hidden>
+        <label>Don’t fill this out: <input name="bot-field"></label>
+      </p>
 
-        <label>Full Name
-          <input type="text" name="name" required style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:10px;">
-        </label>
+      <label>Full Name
+        <input type="text" name="name" required style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:12px;">
+      </label>
 
-        <label>Phone
-          <input type="tel" name="phone" required style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:10px;">
-        </label>
+      <label>Phone
+        <input type="tel" name="phone" required style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:12px;">
+      </label>
 
-        <label>Email
-          <input type="email" name="email" required style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:10px;">
-        </label>
+      <label>Email
+        <input type="email" name="email" required style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:12px;">
+      </label>
 
-        <label>City / Area
-          <input type="text" name="city" placeholder="e.g., Edmonton, St. Albert" style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:10px;">
-        </label>
+      <label>City / Area
+        <input type="text" name="city" placeholder="e.g., Edmonton, St. Albert" style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:12px;">
+      </label>
 
-        <label>Service Needed
-          <select name="service" style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:10px;">
-            <option>Renovations</option>
-            <option>Repairs & Handyman</option>
-            <option>Painting</option>
-            <option>Junk Removal</option>
-            <option>Small Project</option>
-            <option>Other</option>
-          </select>
-        </label>
+      <label>Service Needed
+        <select name="service" style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:12px;">
+          <option>Renovations</option>
+          <option>Repairs & Handyman</option>
+          <option>Painting</option>
+          <option>Junk Removal</option>
+          <option>Small Project</option>
+          <option>Other</option>
+        </select>
+      </label>
 
-        <label>Details
-          <textarea name="details" rows="6" placeholder="Tell us what you need done…" style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:10px;"></textarea>
-        </label>
+      <label>Details
+        <textarea name="details" rows="6" placeholder="Tell us what you need done…" style="width:100%;padding:.75rem;border:1px solid #e5e7eb;border-radius:12px;"></textarea>
+      </label>
 
-        <button class="btn btn-primary" type="submit">Send</button>
-      </form>
-    </section>
-
-    <section class="stack-lg" style="margin-top:2rem;">
-      <h2>Prefer to call?</h2>
-      <p><a class="btn btn-ghost" href="tel:+15875999236">Call (587) 599‑9236</a></p>
-    </section>
+      <button class="btn btn-primary" type="submit">Send</button>
+    </form>
   </main>
 
-  <div class="callnow"><a href="tel:+15875999236">Call Now</a></div>
-
-  <footer style="border-top:1px solid #e5e7eb;margin-top:2rem;">
-    <div class="container" style="padding:1rem 0;">
+  <div class="site-footer">
+    <div class="container inner">
       <p class="small">© 2025 Crestline Contracting — Edmonton &amp; Area</p>
     </div>
-  </footer>
+  </div>
 </body>
 </html>

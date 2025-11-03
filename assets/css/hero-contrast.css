@@ -1,0 +1,28 @@
+
+/* === Crestline Hero Fix — remove black bars & soften overlay === */
+
+/* 1) Remove black background behind photos */
+.hero, .hero-block{
+  background: transparent !important;
+}
+
+/* 2) Softer overlay (still good contrast) */
+.hero::after, .hero-block::after{
+  background: linear-gradient(180deg, rgba(6,18,33,.62), rgba(6,18,33,.74)) !important;
+}
+
+/* 3) Mobile: remove extra padding that created empty overlay space */
+@media (max-width:640px){
+  .hero, .hero-block{ padding: 0 !important; }
+  .hero .media img, .hero-block .media img{
+    height: 52vh !important;           /* keep image tall enough so overlay never shows alone */
+    object-fit: cover !important;
+  }
+}
+
+/* 4) Keep hero title readable (white) but leave <mark> alone */
+.hero .hero-title span, .hero-block .title span{
+  color:#FFFFFF !important;
+  text-shadow:0 3px 18px rgba(0,0,0,.6), 0 1px 0 rgba(0,0,0,.6) !important;
+}
+/* <mark> ("Done Right") intentionally not overridden */

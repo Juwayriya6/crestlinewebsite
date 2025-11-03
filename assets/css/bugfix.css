@@ -1,25 +1,12 @@
 
-/* Kill oversize decorative phone art leaking into pages; keep the small FAB. */
+/* Hide any oversized decorative phone artwork; preserve small FAB button */
 [class*="phone-"], [class*="phone_"], [class*="phone "],
 [class*="call-"], [class*=" call_"], [class*=" call "],
-.call-now, .call-bubble, .call-pill, .callBadge, .callbadge {
-  background: none !important;
-  background-image: none !important;
+.call-now, .call-bubble, .call-pill, .callBadge, .callbadge{
+  background:none !important; background-image:none !important;
 }
-/* Hide large decorative phone images/svgs nested in those wrappers */
 .call-now img, .call-now svg,
 .call-bubble img, .call-bubble svg,
 .call-pill img, .call-pill svg,
 [class*="phone"] > img, [class*="phone"] > svg,
-[class*="call"] > img, [class*="call"] > svg {
-  display: none !important;
-}
-
-/* Keep the floating call button itself neat */
-.fab-call{
-  position:fixed; right:16px; bottom:18px; z-index:1000;
-  width:56px; height:56px; border-radius:50%;
-  overflow:hidden;
-}
-.fab-call svg{ width:24px !important; height:24px !important; display:block; }
-@media (min-width:641px){ .fab-call{ display:none; } }
+[class*="call"] > img, [class*="call"] > svg{ display:none !important; }

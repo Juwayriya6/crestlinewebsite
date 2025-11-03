@@ -7,11 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
 
+  <!-- Base CSS then our skin -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/crestline-autolocks.css">
+
+  <style>
+    /* 3‑Step process styles (scoped) */
+    .steps { counter-reset: step; display:grid; gap:1.25rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); list-style:none; padding:0; margin:0; }
+    .steps li{ position:relative; border:1px solid #e5e7eb; background:#fff; border-radius:12px; padding:1.1rem 1rem 1.1rem 1rem; box-shadow:0 1px 0 rgba(14,42,71,.12); }
+    .steps li::before{ counter-increment: step; content: counter(step); position:absolute; top:1rem; left:1rem; width:38px; height:38px; border-radius:999px; background:#0E2A47; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; }
+    .steps h3{ margin:0 0 .35rem 3.1rem; font-size:clamp(1.1rem,1rem + .4vw,1.3rem); }
+    .steps p{ margin:0 0 0 3.1rem; color:#111827; }
+    .steps .small{ margin-left:3.1rem; }
+  </style>
 
 </head>
 <body>
@@ -53,10 +64,68 @@
     </div>
   </section>
 
+
+  <main class="container" style="padding: 3rem 0;">
+    <section class="stack-lg" style="margin-bottom: 2.5rem;">
+      <h2>Why Crestline</h2>
+      <p>Edmonton’s one‑call contractors for renovations, repairs, painting, and junk removal. Licensed &amp; insured. Free estimates. From small fixes to full renovations, we show up, do it right, and clean up after.</p>
+      <p><a class="btn btn-primary" href="tel:+15879263231">Call (587) 926‑3231</a></p>
+    </section>
+
+    <section class="stack-lg">
+      <h2>Popular Services</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Renovations</h3>
+          <p>Kitchens, bathrooms, basements, drywall &amp; flooring. Professional finishes end‑to‑end.</p>
+        </div>
+        <div class="card">
+          <h3>Repairs &amp; Handyman</h3>
+          <p>Doors, hardware, faucets, drywall patches, TV mounting, caulking, weatherstripping.</p>
+        </div>
+        <div class="card">
+          <h3>Painting</h3>
+          <p>Walls, ceilings, trim, accent walls. Careful prep, crisp lines, durable topcoats.</p>
+        </div>
+        <div class="card">
+          <h3>Junk Removal</h3>
+          <p>Single items to small loads — garage, move‑out, reno debris. Clean, safe disposal.</p>
+        </div>
+      </div>
+      <div style="margin-top:1.25rem;">
+        <a class="btn btn-primary" href="services.html">All Services</a>
+      </div>
+    </section>
+
+
+    <section class="stack-lg" style="margin-top:2.25rem;">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li>
+          <h3>Call &amp; Free Estimate</h3>
+          <p>Tell us what you need. We give clear pricing and scheduling options up front.</p>
+          <p class="small"><a href="tel:+15879263231">Call (587) 926‑3231</a> or <a href="contact.html">send a request</a>.</p>
+        </li>
+        <li>
+          <h3>Schedule &amp; Prep</h3>
+          <p>We book a time that works, confirm materials, and protect your space before work begins.</p>
+          <p class="small">On-time arrival, courteous crew, tidy setup.</p>
+        </li>
+        <li>
+          <h3>Build &amp; Clean‑up</h3>
+          <p>We complete the work to spec, walk you through the result, and leave the site clean.</p>
+          <p class="small">Done right — no mess left behind.</p>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+
   <div class="site-footer">
     <div class="container inner">
       <p class="small">© 2025 Crestline Contracting — Edmonton &amp; Area</p>
     </div>
   </div>
+
 </body>
 </html>

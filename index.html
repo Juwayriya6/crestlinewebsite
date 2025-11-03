@@ -7,22 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
 
-  <!-- Base CSS then our skin -->
+  <!-- Base CSS then skins -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/crestline-autolocks.css">
-
-  <style>
-    /* 3‑Step process styles (scoped) */
-    .steps { counter-reset: step; display:grid; gap:1.25rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); list-style:none; padding:0; margin:0; }
-    .steps li{ position:relative; border:1px solid #e5e7eb; background:#fff; border-radius:12px; padding:1.1rem 1rem 1.1rem 1rem; box-shadow:0 1px 0 rgba(14,42,71,.12); }
-    .steps li::before{ counter-increment: step; content: counter(step); position:absolute; top:1rem; left:1rem; width:38px; height:38px; border-radius:999px; background:#0E2A47; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; }
-    .steps h3{ margin:0 0 .35rem 3.1rem; font-size:clamp(1.1rem,1rem + .4vw,1.3rem); }
-    .steps p{ margin:0 0 0 3.1rem; color:#111827; }
-    .steps .small{ margin-left:3.1rem; }
-  </style>
+  <link rel="stylesheet" href="assets/css/colors-light.css">
 
 </head>
 <body>
@@ -44,26 +35,34 @@
   </div>
 
 
+  <style>
+    .steps { counter-reset: step; display:grid; gap:1.25rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); list-style:none; padding:0; margin:0; }
+    .steps li{ position:relative; border:1px solid #e5e7eb; background:#fff; border-radius:12px; padding:1.1rem 1rem 1.1rem 1rem; box-shadow:0 1px 0 rgba(14,42,71,.12); }
+    .steps li::before{ counter-increment: step; content: counter(step); position:absolute; top:1rem; left:1rem; width:38px; height:38px; border-radius:999px; background:var(--ink); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; }
+    .steps h3{ margin:0 0 .35rem 3.1rem; font-size:clamp(1.1rem,1rem + .4vw,1.3rem); }
+    .steps p{ margin:0 0 0 3.1rem; color:#111827; }
+    .steps .small{ margin-left:3.1rem; }
+  </style>
+
   <section class="hero-block">
     <div class="media">
       <picture>
         <source srcset="assets/images/hero/crestline-hero-2400.webp" media="(min-width:1200px)" type="image/webp">
-        <source srcset="assets/images/hero/crestline-hero-1600.webp" media="(min-width:768px)" type="image/webp">
+        <source srcset="assets/images/hero/crestline-hero-2400.webp" media="(min-width:768px)" type="image/webp">
         <source srcset="assets/images/hero/crestline-hero-1200.webp" media="(max-width:767px)" type="image/webp">
-        <img src="assets/images/hero/crestline-hero-1024.jpg" alt="Crestline crew at work on scaffolding during sunset" loading="eager" fetchpriority="high">
+        <img src="assets/images/hero/crestline-hero-1024.jpg" alt="<span>One Call.</span> <span>Every Project.</span> <mark>Done Right.</mark>" loading="eager" fetchpriority="high">
       </picture>
     </div>
     <div class="container stack-lg">
       <p class="eyebrow">Crestline Contracting</p>
       <h1 class="title"><span>One Call.</span> <span>Every Project.</span> <mark>Done Right.</mark></h1>
-      <p class="sub">Renovations • Repairs • Painting • Junk Removal — Edmonton &amp; Area</p>
+      <p class="sub">Renovations • Repairs • Painting • Junk Removal — Edmonton & Area</p>
       <div class="stack-md">
         <a class="btn btn-primary" href="contact.html">Free Estimate</a>
         <a class="btn btn-outline" href="services.html">See Services</a>
       </div>
     </div>
   </section>
-
 
   <main class="container" style="padding: 3rem 0;">
     <section class="stack-lg" style="margin-bottom: 2.5rem;">
@@ -97,7 +96,6 @@
       </div>
     </section>
 
-
     <section class="stack-lg" style="margin-top:2.25rem;">
       <h2>How it works</h2>
       <ol class="steps">
@@ -120,12 +118,10 @@
     </section>
   </main>
 
-
   <div class="site-footer">
     <div class="container inner">
       <p class="small">© 2025 Crestline Contracting — Edmonton &amp; Area</p>
     </div>
   </div>
-
 </body>
 </html>

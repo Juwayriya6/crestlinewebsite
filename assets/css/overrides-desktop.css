@@ -1,0 +1,6 @@
+
+/* ===== Desktop hero anti-minimize floor ===== */
+@media (min-width:641px){
+  .hero.hero--image .hero-media img{ min-height:62vh; object-fit:cover; }
+  .hero.hero--image{ padding:7vh 0; }
+}

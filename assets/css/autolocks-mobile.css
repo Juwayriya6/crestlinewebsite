@@ -1,43 +1,28 @@
 
-/* ===== Mobile layout like AutoLocks (no JS required) ===== */
+/* ===== AutoLocks-like Mobile Layout (CSS only) ===== */
 @media (max-width:640px){
-  .site-topbar{ background:#fff; border-bottom:1px solid #eef2f7; box-shadow:none; }
-  .site-topbar .bar{ display:block; padding:.65rem 0 .55rem; }
-  .site-topbar .brand{ display:flex; align-items:center; gap:.6rem; text-decoration:none; color:inherit; }
-  .site-topbar .brand img{ height:28px; width:auto; border-radius:6px; }
-  .site-topbar .brand span{ display:block; font-weight:800; font-size:1.2rem; letter-spacing:-.01em; line-height:1.05; }
-  .site-topbar .brand .tagline{ display:block; font-size:.95rem; color:#64748B; font-weight:600; }
-  .site-topbar nav{ display:flex; gap:1.1rem; align-items:center; padding-top:.55rem; margin-top:.5rem; border-top:1px solid #eef2f7; }
-  .site-topbar nav a{ font-weight:800; text-decoration:none; }
-  .top-cta{ display:none !important; } /* hide large phone chip */
-  /* tighter hero on mobile */
-  .hero-block{ padding:min(7vh,2rem) 0; }
-  /* Readable text over banner photos */
-  .hero-block .eyebrow, .hero-block .sub{
-    color:rgba(255,255,255,.97);
-    text-shadow:0 2px 12px rgba(0,0,0,.4), 0 1px 0 rgba(0,0,0,.45);
+  /* Clean white header, stacked brand + nav */
+  .site-header{ background:#fff; border-bottom:1px solid #eef2f7; }
+  .site-header .container{ display:block !important; padding:.75rem 0 .6rem !important; }
+  .site-header .brand{ display:flex; align-items:center; gap:.6rem; color:inherit; text-decoration:none; }
+  .site-header .brand img{ height:30px; width:auto; border-radius:6px; }
+  .site-header .brand span{ display:block; font-weight:800; font-size:1.25rem; line-height:1.05; letter-spacing:-.01em; }
+  nav{ display:flex; gap:1.2rem; align-items:center; padding-top:.6rem; margin-top:.5rem; border-top:1px solid #eef2f7; }
+  nav a{ font-weight:800; text-decoration:none; }
+  /* Compact hero like AutoLocks */
+  .hero{ padding: min(7vh, 2rem) 0 !important; }
+  /* Readability on photo */
+  .eyebrow, .hero-sub{
+    color: rgba(255,255,255,.97);
+    text-shadow: 0 2px 12px rgba(0,0,0,.4), 0 1px 0 rgba(0,0,0,.45);
   }
   .btn{ padding:.8rem 1rem; border-radius:14px; }
-  .card{ border-color:#eef2f7 !important; box-shadow:0 1px 0 rgba(14,42,71,.1); }
 }
 
-/* Lighten only the non-mark parts of the hero title; leave <mark> (Done Right) alone */
+/* Lighten only the non-<mark> parts of the hero title — keep “Done Right” as-is */
 :root{ --crestline-hero-steel:#2A5CAA; } /* lighter-than-navy */
-.hero-block .title span{ color:var(--crestline-hero-steel); text-shadow:0 2px 12px rgba(0,0,0,.35); }
-/* do NOT change <mark> — user requested */
-.hero-block .title mark{ /* intentionally untouched */ }
-
-/* Floating Call Button like a mobile FAB */
-.fab-call{
-  position:fixed; right:16px; bottom:18px; z-index:1000;
-  width:56px; height:56px; border-radius:50%;
-  background:var(--accent, #FF8A3D); color:#fff;
-  display:flex; align-items:center; justify-content:center;
-  box-shadow:0 12px 28px rgba(0,0,0,.22), 0 4px 8px rgba(0,0,0,.12);
-  text-decoration:none; font-weight:900;
+.hero-title span{
+  color: var(--crestline-hero-steel);
+  text-shadow: 0 2px 12px rgba(0,0,0,.35);
 }
-.fab-call svg{ width:24px; height:24px; display:block; fill:#fff; }
-@media (min-width:641px){ .fab-call{ display:none; } }
-@supports (padding:max(0px)){
-  .fab-call{ right:max(16px, env(safe-area-inset-right)); bottom:max(18px, env(safe-area-inset-bottom)); }
-}
+/* Intentionally DO NOT touch .hero-title mark (Done Right) */

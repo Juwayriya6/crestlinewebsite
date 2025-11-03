@@ -1,12 +1,13 @@
-Crestline — Full site with **MINIMAL desktop header** already linked on every page,
-plus mobile polish and lighter palette.
+Crestline full update — 2025-11-03
 
-What changed:
-- Clean, quiet header on desktop (no blue phone pill).
-- AutoLocks-style mobile: tidy white header + floating call button.
-- Softer navy + warmer orange.
+Includes:
+- Updated HTML pages (index with 3-step, per-page heroes, city pages, thank-you)
+- Mobile polish to match AutoLocks (mobile-autolocks.css + floating call button)
+- Lighter color palette (colors-light.css)
+- Domain files (_redirects, robots.txt, sitemap.xml for crestlinegc.com)
 
-How to deploy:
-1) Upload everything to your repo root and allow GitHub to **replace** existing files.
-2) Commit to main → Netlify deploy.
-3) Hard refresh on mobile & desktop.
+How to merge:
+1) Upload everything to your repo root and **replace** same-named files.
+2) Make sure your images exist under assets/images/... as referenced.
+3) Commit to main → deploy.
+4) Netlify: set primary domain to crestlinegc.com and enable HTTPS.

@@ -1,0 +1,17 @@
+
+/* === Hero contrast & overlay softener (keeps <mark> 'Done Right' unchanged) === */
+.hero, .hero-block{ background: transparent !important; }
+.hero::after, .hero-block::after{
+  background: linear-gradient(180deg, rgba(6,18,33,.62), rgba(6,18,33,.74)) !important;
+}
+@media (max-width:640px){
+  .hero, .hero-block{ padding: 0 !important; }
+  .hero .media img, .hero-block .media img{
+    height: 52vh !important; object-fit: cover !important;
+  }
+}
+.hero .hero-title span, .hero-block .title span{
+  color:#FFFFFF !important;
+  text-shadow:0 3px 18px rgba(0,0,0,.6), 0 1px 0 rgba(0,0,0,.6) !important;
+}
+/* Intentionally do not override .hero mark / .title mark */

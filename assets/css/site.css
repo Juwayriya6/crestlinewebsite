@@ -1,90 +1,139 @@
+root{
+  /* Brand palette */
+  --brand-ink: #CFD3D9;        /* headings, strong text */
+  --brand-bg: #0A1626;         /* dark hero background if used */
+  --accent: #F15A29;           /* accent for highlights/buttons */
+  --muted: #6B7280;            /* secondary text */
+  --surface: #FFFFFF;
 
-:root{
-  --ink:#0F2742;           /* deep navy for body text */
-  --ink-soft:#2A5CAA;      /* lighter-than-navy for hero spans */
-  --muted:#64748B;
-  --bg:#F8FAFC;
-  --panel:#FFFFFF;
-  --line:#EEF2F7;
-  --accent:#FF8A3D;        /* keep mark color */
+  /* Fluid type scale */
+  --step--1: clamp(0.95rem, 0.90rem + 0.2vw, 1.05rem);
+  --step-0:  clamp(1.00rem, 0.92rem + 0.39vw, 1.25rem);
+  --step-1:  clamp(1.25rem, 1.07rem + 0.86vw, 1.75rem);
+  --step-2:  clamp(1.56rem, 1.18rem + 1.9vw, 2.5rem);
+  --step-3:  clamp(1.95rem, 1.19rem + 3.3vw, 3.25rem);
+  --step-4:  clamp(2.44rem, 1.07rem + 6.82vw, 4.5rem);
 }
 
-*{box-sizing:border-box}
-html,body{margin:0;padding:0}
-body{
-  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";
-  color:#0f172a; background:var(--bg);
-  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
-}
-img{max-width:100%; height:auto; display:block}
-.container{max-width:1140px; margin:0 auto; padding:0 16px}
-
-/* Topbar (desktop) */
-.site-topbar{position:sticky; top:0; z-index:50; background:#fff; border-bottom:1px solid var(--line)}
-.site-topbar .bar{display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding:.7rem 0}
-.site-topbar .brand{display:flex; align-items:center; gap:.6rem; color:var(--ink); text-decoration:none}
-.site-topbar .brand img{height:32px; width:auto; border-radius:6px}
-.site-topbar .brand span{font-weight:800; font-size:1.25rem; letter-spacing:-.01em; line-height:1.05}
-.site-topbar nav{display:flex; align-items:center; gap:1.15rem}
-.site-topbar nav a{color:var(--ink); text-decoration:none; font-weight:700}
-.site-topbar nav a:hover{text-decoration:underline; text-underline-offset:2px}
-.top-cta a{
-  display:inline-block; padding:.6rem .9rem; border-radius:999px; background:var(--ink); color:#fff;
-  font-weight:800; text-decoration:none; box-shadow:0 6px 16px rgba(15,39,66,.22);
+html{
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
 }
 
-/* Hero */
-.hero{position:relative; overflow:hidden; background:#000}
-.hero .media img{width:100%; height:64vh; object-fit:cover; display:block; filter: none;}
-.hero::after{content:""; position:absolute; inset:0;
-  background:linear-gradient(180deg, rgba(9,25,45,.55), rgba(9,25,45,.62));
-}
-.hero .inner{position:absolute; inset:auto 0 10%; color:#fff; z-index:2}
-.eyebrow{font-weight:800; letter-spacing:.12em; opacity:.95}
-.hero-title{margin:.25rem 0 .5rem; font-weight:800; line-height:1.05; font-size:clamp(2rem, 1.2rem + 3vw, 3.2rem)}
-.hero-title span{color:var(--ink-soft); text-shadow:0 2px 12px rgba(0,0,0,.35)}
-.hero-title mark{background:none; color:var(--accent);}
-.hero-sub{font-size:1.1rem; opacity:.95; text-shadow:0 1px 8px rgba(0,0,0,.35)}
-.stack-md{display:flex; gap:.75rem; flex-wrap:wrap; align-items:center; margin-top:.75rem}
-.btn{display:inline-block; padding:.85rem 1.1rem; border-radius:14px; border:2px solid rgba(255,255,255,.75); color:#fff; text-decoration:none; font-weight:800}
-.btn:hover{border-color:#fff}
-.btn-primary{background:var(--ink); border-color:var(--ink);}
-
-/* Sections */
-main{padding:2.5rem 0 3rem}
-h1,h2,h3{color:#0b2545}
-.card-grid{display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.card{background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:1rem; box-shadow:0 1px 0 rgba(15,39,66,.06)}
-.small{color:var(--muted)}
-
-/* Footer */
-.site-footer{border-top:1px solid var(--line); background:#fff}
-.site-footer .inner{padding:1.25rem 0}
-
-/* Desktop hero floor */
-@media (min-width:641px){
-  .hero .media img{min-height:62vh}
+h1,h2,h3{
+  font-family: "Manrope", "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: -0.015em;
+  color: var(--brand-ink);
+  margin: 0 0 .35em;
 }
 
-/* Mobile like AutoLocks */
-@media (max-width:640px){
-  .site-topbar .bar{display:block; padding:.75rem 0 .6rem}
-  .site-topbar nav{padding-top:.6rem; margin-top:.5rem; border-top:1px solid var(--line)}
-  .top-cta{display:none}
-  .hero{padding:min(7vh,2rem) 0}
-  .hero .media img{height:48vh}
-  .btn{padding:.8rem 1rem; border-radius:14px}
+h1{ font-size: var(--step-3); font-weight: 800; line-height: .98; }
+h2{ font-size: var(--step-2); font-weight: 800; line-height: 1.05; }
+h3{ font-size: var(--step-1); font-weight: 700; line-height: 1.1; }
+
+p, li{ font-size: var(--step-0); color: #111827; }
+.small{ font-size: var(--step--1); color: var(--muted); }
+
+/* Eyebrow label for small caps headers */
+.eyebrow{
+  font-size: var(--step--1);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  font-weight: 700;
 }
 
-/* Floating call button for phones */
-.fab-call{
-  position:fixed; right:16px; bottom:18px; z-index:1000;
-  width:56px; height:56px; border-radius:50%; background:var(--accent); color:#fff;
-  display:flex; align-items:center; justify-content:center; text-decoration:none; font-weight:900;
-  box-shadow:0 12px 28px rgba(0,0,0,.22), 0 4px 8px rgba(0,0,0,.12);
+/* ======= Layout helpers ======= */
+.container{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
-.fab-call svg{width:24px; height:24px; fill:#fff; display:block}
-@media (min-width:641px){ .fab-call{display:none} }
-@supports (padding:max(0px)){
-  .fab-call{ right:max(16px, env(safe-area-inset-right)); bottom:max(18px, env(safe-area-inset-bottom)); }
+
+/* ======= Hero ======= */
+.hero{
+  position: relative;
+  padding: clamp(3rem, 4vw + 2rem, 7rem) 1.25rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
 }
+
+.hero-title{
+  font-size: var(--step-4);
+  font-weight: 800;
+  line-height: .96;
+  letter-spacing: -0.02em;
+}
+
+.hero-title mark{
+  background: linear-gradient(90deg, var(--accent), #FFB703);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  padding: 0 .06em;
+}
+
+.hero-sub{
+  font-size: var(--step-1);
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: .75rem;
+}
+
+/* CTA buttons */
+.btn{
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: .5rem; padding: .9rem 1.15rem; border-radius: 10px;
+  font-weight: 700; text-decoration: none; border: 2px solid transparent;
+  transition: transform .08s ease, box-shadow .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.btn:active{ transform: translateY(1px); }
+
+.btn-primary{
+  background: var(--brand-ink);
+  color: var(--surface);
+  border-color: var(--brand-ink);
+  box-shadow: 0 6px 18px rgba(14,42,71,0.18);
+}
+.btn-primary:hover{ background:#122f54; border-color:#122f54; }
+
+.btn-ghost{
+  background: transparent; color: var(--brand-ink);
+  border-color: #cbd5e1;
+}
+.btn-ghost:hover{ border-color: var(--brand-ink); color: var(--brand-ink); }
+
+/* Utility spacing */
+.stack-sm > * + *{ margin-top: .5rem; }
+.stack-md > * + *{ margin-top: 1rem; }
+.stack-lg > * + *{ margin-top: 1.5rem; }
+
+/* Page titles used inside content pages */
+.page-title{
+  margin-top: 1rem;
+  font-size: var(--step-3);
+}
+.page-sub{
+  font-size: var(--step-0);
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: .25rem;
+}
+
+/* Cards grid */
+.card-grid{
+  display: grid; gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.card{
+  border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.1rem;
+  background: #fff;
+}
+.card h3{ margin: 0 0 .25rem; }
+
+/* Simple floating Call button */
+.callnow{ position: fixed; right: 16px; bottom: 16px; z-index: 50; }
+.callnow a{ display:inline-flex; padding:.9rem 1rem; border-radius:999px; background:#0E2A47; color:#fff; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(14,42,71,.25); }
+.callnow a:hover{ background:#122f54; }

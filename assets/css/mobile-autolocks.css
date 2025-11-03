@@ -1,5 +1,0 @@
-
-/* Floating call button */
-.fab-call{ position:fixed; right:16px; bottom:18px; z-index:1000; width:56px; height:56px; border-radius:50%; background:var(--accent); color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 12px 28px rgba(0,0,0,.22), 0 4px 8px rgba(0,0,0,.12); text-decoration:none; font-weight:900; }
-.fab-call svg{ width:24px; height:24px; display:block; fill:#fff; }
-@media (min-width:641px){ .fab-call{ display:none; } }

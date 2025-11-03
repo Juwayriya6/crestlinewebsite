@@ -2,26 +2,22 @@
 <html lang="en">
 <head>
   <title>Beaumont — Crestline</title>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
 
-  <!-- Base CSS then skins -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/crestline-autolocks.css">
-  <link rel="stylesheet" href="assets/css/colors-light.css">
+  <link rel="stylesheet" href="assets/css/crestline-overrides.css">
 
 </head>
 <body>
-
-  <div class="site-topbar">
-    <div class="container bar">
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
       <a class="brand" href="index.html">
-        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline">
+        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline" style="height:36px;width:auto">
         <span>Crestline</span>
       </a>
       <nav>
@@ -30,30 +26,54 @@
         <a href="locations.html">Locations</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="top-cta"><a href="tel:+15879263231">(587) 926‑3231</a></div>
     </div>
-  </div>
+  </header>
 
+  <header class="hero">
+    <div class="container stack-lg">
+      <p class="eyebrow">Crestline in Beaumont</p>
+      <h1 class="hero-title">Beaumont Contractors</h1>
+      <p class="hero-sub">Renovations • Repairs • Painting • Junk Removal — Beaumont & Nearby</p>
+      <div class="stack-md">
+        <a class="btn btn-primary" href="contact.html">Free Estimate</a>
+        <a class="btn btn-ghost" href="services.html">See Services</a>
+      </div>
+    </div>
+  </header>
 
-  <main class="container" style="padding: 2.5rem 0 3rem;">
-    <h1>Beaumont Contractors</h1>
-    <p class="small">Renovations • Repairs • Painting • Junk Removal — Beaumont & Nearby</p>
-    <div class="card-grid" style="margin-top:1rem;">
-      <div class="card"><h3>Renovations</h3><p>Kitchens, bathrooms, basements, drywall &amp; flooring — designed and built for Beaumont homes.</p></div>
-      <div class="card"><h3>Repairs &amp; Handyman</h3><p>Doors, hardware, faucets, drywall patches, TV mounting, weatherstripping — quick fixes done right.</p></div>
-      <div class="card"><h3>Painting</h3><p>Walls, ceilings, trim and accent features. Careful prep for durable results.</p></div>
-      <div class="card"><h3>Junk Removal</h3><p>Cleanouts and small‑load hauling — garages, move‑outs, reno debris. Responsible disposal.</p></div>
-    </div>
-    <div class="stack-md" style="margin-top:1.25rem;">
-      <a class="btn btn-primary" href="contact.html">Request a Free Estimate</a>
-      <a class="btn btn-outline" href="tel:+15879263231">Call (587) 926‑3231</a>
-    </div>
+  <main class="container" style="padding:2rem 0 3rem;">
+    <section class="stack-lg">
+      <h2>Our Services in Beaumont</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Renovations</h3>
+          <p>Kitchens, bathrooms, basements, drywall &amp; flooring — designed and built for Beaumont homes.</p>
+        </div>
+        <div class="card">
+          <h3>Repairs &amp; Handyman</h3>
+          <p>Doors, hardware, faucets, drywall patches, TV mounting, weatherstripping — quick fixes done right.</p>
+        </div>
+        <div class="card">
+          <h3>Painting</h3>
+          <p>Walls, ceilings, trim and accent features. Careful prep for durable results.</p>
+        </div>
+        <div class="card">
+          <h3>Junk Removal</h3>
+          <p>Cleanouts and small‑load hauling — garages, move‑outs, reno debris. Responsible disposal.</p>
+        </div>
+      </div>
+      <div style="margin-top:1.25rem;">
+        <a class="btn btn-primary" href="contact.html">Request a Free Estimate</a>
+      </div>
+    </section>
   </main>
 
-  <div class="site-footer">
-    <div class="container inner">
+  <div class="callnow"><a href="tel:+15875999236">Call Now</a></div>
+
+  <footer style="border-top:1px solid #e5e7eb;margin-top:2rem;">
+    <div class="container" style="padding:1rem 0;">
       <p class="small">© 2025 Crestline Contracting — Edmonton &amp; Area</p>
     </div>
-  </div>
+  </footer>
 </body>
 </html>

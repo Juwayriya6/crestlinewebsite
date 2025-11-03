@@ -2,26 +2,22 @@
 <html lang="en">
 <head>
   <title>Locations — Crestline</title>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
 
-  <!-- Base CSS then skins -->
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/crestline-autolocks.css">
-  <link rel="stylesheet" href="assets/css/colors-light.css">
+  <link rel="stylesheet" href="assets/css/crestline-overrides.css">
 
 </head>
 <body>
-
-  <div class="site-topbar">
-    <div class="container bar">
+  <header class="site-header">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;">
       <a class="brand" href="index.html">
-        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline">
+        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline" style="height:36px;width:auto">
         <span>Crestline</span>
       </a>
       <nav>
@@ -30,34 +26,20 @@
         <a href="locations.html">Locations</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <div class="top-cta"><a href="tel:+15879263231">(587) 926‑3231</a></div>
     </div>
-  </div>
+  </header>
 
-
-  <section class="hero-block">
-    <div class="media">
-      <picture>
-        <source srcset="assets/images/sections/section-build-roof-1600.webp" media="(min-width:1200px)" type="image/webp">
-        <source srcset="assets/images/sections/section-build-roof-1600.webp" media="(min-width:768px)" type="image/webp">
-        <source srcset="assets/images/sections/section-build-roof-1200.webp" media="(max-width:767px)" type="image/webp">
-        <img src="assets/images/sections/section-build-roof-1200.jpg" alt="Locations" loading="eager" fetchpriority="high">
-      </picture>
-    </div>
+  <header class="hero">
     <div class="container stack-lg">
       <p class="eyebrow">Serving Edmonton & Area</p>
-      <h1 class="title">Locations</h1>
-      <p class="sub">Renovations • Repairs • Painting • Junk Removal</p>
-      <div class="stack-md">
-        <a class="btn btn-primary" href="contact.html">Free Estimate</a>
-        <a class="btn btn-outline" href="services.html">See Services</a>
-      </div>
+      <h1 class="hero-title">Locations</h1>
+      <p class="hero-sub">Renovations • Repairs • Painting • Junk Removal</p>
     </div>
-  </section>
+  </header>
 
-  <main class="container" style="padding: 2.5rem 0 3rem;">
+  <main class="container" style="padding:2rem 0 3rem;">
     <h2>Cities we serve</h2>
-    <ul class="link-grid" style="margin-top:1rem;">
+    <ul style="columns:2;gap:2rem;list-style:none;padding:0;">
       <li><a href="edmonton.html">Edmonton</a></li>
       <li><a href="st-albert.html">St. Albert</a></li>
       <li><a href="sherwood-park.html">Sherwood Park</a></li>
@@ -72,10 +54,10 @@
     </ul>
   </main>
 
-  <div class="site-footer">
-    <div class="container inner">
+  <footer style="border-top:1px solid #e5e7eb;margin-top:2rem;">
+    <div class="container" style="padding:1rem 0;">
       <p class="small">© 2025 Crestline Contracting — Edmonton &amp; Area</p>
     </div>
-  </div>
+  </footer>
 </body>
 </html>

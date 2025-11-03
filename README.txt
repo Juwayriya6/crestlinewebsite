@@ -20,7 +20,7 @@ A      autolocks.ca      75.2.60.5
 CNAME  www               autolocksca.netlify.app
 
 Checks
-- https://www.autolocks.ca loads securely
+- https://www.crestlinegc.com loads securely
 - Contact form creates Netlify form submissions
 - Favicons render (tab & mobile)
 - Call button visible on mobile

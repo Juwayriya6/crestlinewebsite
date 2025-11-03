@@ -1,0 +1,29 @@
+
+/* --- Mobile-friendly tweaks + softer hero title color --- */
+:root{ --hero-title: #2A5CAA; } /* lighter than navy */
+
+/* Hero text */
+.hero-block .title{ color: var(--hero-title); text-shadow: 0 2px 12px rgba(0,0,0,.35); }
+.hero-block .title mark{ all: unset; } /* do not alter your existing mark styling */
+
+/* Eyebrow + sub for readability */
+.hero-block .eyebrow{ color: rgba(255,255,255,.92); text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+.hero-block .sub{ color: rgba(255,255,255,.95); text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+
+/* Buttons on hero */
+.hero-block .btn-outline{ color:#fff; border-color: rgba(255,255,255,.82); }
+.hero-block .btn-outline:hover{ border-color:#fff; }
+
+/* Header cleanup for phones */
+@media (max-width:640px){
+  .site-topbar .bar{ display:block; padding:.75rem 0 .6rem; }
+  .site-topbar .brand{ display:flex; align-items:center; gap:.6rem; }
+  .site-topbar .brand img{ height:30px; width:auto; border-radius:6px; }
+  .site-topbar .brand span{ display:block; font-weight:800; font-size:1.25rem; line-height:1.05; letter-spacing:-.01em; }
+  .site-topbar .brand .tagline{ display:block; font-size:.95rem; color:#64748B; font-weight:600; }
+  .site-topbar nav{ display:flex; gap:1.2rem; align-items:center; padding-top:.6rem; margin-top:.5rem; border-top:1px solid #EEF2F7; }
+  .site-topbar nav a{ font-weight:800; }
+  .top-cta{ display:none; } /* hide phone chip on very small screens */
+  .hero-block{ padding: min(7vh, 2rem) 0; }
+  .btn{ padding:.8rem 1rem; border-radius:14px; }
+}

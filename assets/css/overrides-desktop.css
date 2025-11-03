@@ -1,5 +1,0 @@
-
-@media (min-width:641px){
-  .hero .media img, .hero-block .media img{ min-height:62vh; object-fit:cover; }
-  .hero, .hero-block{ padding:7vh 0; }
-}

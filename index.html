@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Crestline — One Call. Every Project. Done Right.</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
@@ -10,17 +12,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400..800&family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/crestline-autolocks.css">
-  <link rel="stylesheet" href="assets/css/colors-light.css">
-  <link rel="stylesheet" href="assets/css/mobile-autolocks.css">
-  <link rel="stylesheet" href="assets/css/header-min.css">
-  <title>Crestline — One Call. Every Project. Done Right.</title>
+
 </head>
 <body>
+
   <div class="site-topbar">
     <div class="container bar">
       <a class="brand" href="index.html">
-        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline" style="height:32px;border-radius:6px">
-        <span>Crestline <em class="tagline">Edmonton &amp; Area</em></span>
+        <img src="assets/images/logo/crestline-logo-256.png" alt="Crestline">
+        <span>Crestline</span>
       </a>
       <nav>
         <a href="index.html">Home</a>
@@ -32,44 +32,26 @@
     </div>
   </div>
 
+
   <section class="hero-block">
     <div class="media">
-      <img src="assets/images/hero/crestline-hero-1024.jpg" alt="Crestline Contractors">
+      <picture>
+        <source srcset="assets/images/hero/crestline-hero-2400.webp" media="(min-width:1200px)" type="image/webp">
+        <source srcset="assets/images/hero/crestline-hero-1600.webp" media="(min-width:768px)" type="image/webp">
+        <source srcset="assets/images/hero/crestline-hero-1200.webp" media="(max-width:767px)" type="image/webp">
+        <img src="assets/images/hero/crestline-hero-1024.jpg" alt="Crestline crew at work on scaffolding during sunset" loading="eager" fetchpriority="high">
+      </picture>
     </div>
-    <div class="container">
+    <div class="container stack-lg">
       <p class="eyebrow">Crestline Contracting</p>
       <h1 class="title"><span>One Call.</span> <span>Every Project.</span> <mark>Done Right.</mark></h1>
       <p class="sub">Renovations • Repairs • Painting • Junk Removal — Edmonton &amp; Area</p>
-      <div>
+      <div class="stack-md">
         <a class="btn btn-primary" href="contact.html">Free Estimate</a>
-        <a class="btn" href="services.html">See Services</a>
+        <a class="btn btn-outline" href="services.html">See Services</a>
       </div>
     </div>
   </section>
-
-  <main class="container" style="padding:2rem 0 3rem">
-    <section class="stack-lg" style="margin-bottom: 1.75rem;">
-      <h2>Why Crestline</h2>
-      <p>Edmonton’s one-call contractors for renovations, repairs, painting, and junk removal. Licensed &amp; insured. Free estimates.</p>
-      <p><a class="btn btn-primary" href="tel:+15879263231">Call (587) 926‑3231</a></p>
-    </section>
-
-    <section class="stack-lg">
-      <h2>Popular Services</h2>
-      <div class="card-grid">
-        <div class="card"><h3>Renovations</h3><p>Kitchens, bathrooms, basements, drywall &amp; flooring.</p></div>
-        <div class="card"><h3>Repairs &amp; Handyman</h3><p>Doors, faucets, drywall patches, TV mounting, caulking.</p></div>
-        <div class="card"><h3>Painting</h3><p>Walls, ceilings, trim, and accent walls with crisp lines.</p></div>
-        <div class="card"><h3>Junk Removal</h3><p>From single items to small loads — cleanouts &amp; debris.</p></div>
-      </div>
-    </section>
-  </main>
-
-  <a class="fab-call" href="tel:+15879263231" aria-label="Call Crestline">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M6.62 10.79a15.53 15.53 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V21a1 1 0 01-1 1C10.85 22 2 13.15 2 2a1 1 0 011-1h3.5a1 1 0 011 1c0 1.24.2 2.45.57 3.57a1 1 0 01-.24 1.02l-2.2 2.2z" fill="currentColor"/>
-    </svg>
-  </a>
 
   <div class="site-footer">
     <div class="container inner">

@@ -1,0 +1,34 @@
+:root{
+  --ink: #2A5CAA;     /* lighter navy / steel blue */
+  --accent: #FF8A3D;  /* softer orange */
+}
+.top-cta a,
+.btn-primary{
+  background: var(--ink) !important;
+  border-color: var(--ink) !important;
+  box-shadow: 0 6px 16px rgba(42,92,170,.22) !important;
+}
+.btn-primary:hover{ filter: brightness(.95); }
+.site-topbar{
+  background: #ffffffee;
+  backdrop-filter: saturate(180%) blur(6px);
+  -webkit-backdrop-filter: saturate(180%) blur(6px);
+  border-bottom-color: #eef2f7;
+}
+.hero-block::after{
+  background: linear-gradient(
+    180deg,
+    rgba(17,36,62,.50) 0%,
+    rgba(17,36,62,.38) 35%,
+    rgba(17,36,62,.60) 100%
+  ) !important;
+}
+.card{
+  border-color:#eef2f7 !important;
+  box-shadow:0 1px 0 rgba(42,92,170,.08);
+}
+.hero-block .btn-outline{
+  color:#fff !important;
+  border-color:rgba(255,255,255,.75) !important;
+}
+.hero-block .btn-outline:hover{ border-color:#fff !important; }

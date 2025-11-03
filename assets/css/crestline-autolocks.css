@@ -7,7 +7,7 @@ html { box-sizing: border-box; }
 *, *::before, *::after { box-sizing: inherit; }
 
 :root{
-  --ink: #CFD3D9;      /* Light gray navy */
+  --ink: #6F7D8D;      /* Light gray navy */
   --accent: #F15A29;   /* orange accent */
   --muted: #6B7280;
   --bg: #FFFFFF;

@@ -134,6 +134,21 @@ p, li{ font-size: var(--step-0); color: #111827; }
 .card h3{ margin: 0 0 .25rem; }
 
 /* Simple floating Call button */
-.callnow{ position: fixed; right: 16px; bottom: 16px; z-index: 50; }
-.callnow a{ display:inline-flex; padding:.9rem 1rem; border-radius:999px; background:#0E2A47; color:#fff; text-decoration:none; font-weight:800; box-shadow:0 8px 24px rgba(14,42,71,.25); }
-.callnow a:hover{ background:#122f54; }
+.call-now {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: 0.3s;
+  z-index: 2000;
+}
+.call-now:hover {
+  background: var(--navy);
+  color: #fff;
+}

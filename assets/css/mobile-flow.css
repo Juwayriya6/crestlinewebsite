@@ -83,15 +83,24 @@ h3{ font-weight: 700; font-size: clamp(1.15rem, 1rem + .6vw, 1.35rem); margin: 0
 .site-footer{ text-align:center; padding: 1.5rem 0; margin-top: 3rem; }
 
 /* Floating call button */
-.call-now, .fab-call{
-  position: fixed; bottom: 20px; right: 20px; z-index: 2000;
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 56px; height: 56px; border-radius: 50%; text-decoration: none;
-  background: var(--accent, #FF8A3D); color: var(--ink, #0F2742);
+.call-now {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 50%;
+  text-decoration: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  transition: .3s;
+  transition: 0.3s;
+  z-index: 2000;
 }
-.call-now:hover, .fab-call:hover{ filter: brightness(0.95); }
+.call-now:hover {
+  background: var(--navy);
+  color: #fff;
+}
 
 /* Locations/cities (optional classes if present) */
 .locations-intro{ margin-top:2rem; text-align:center; padding:0 1rem; }
